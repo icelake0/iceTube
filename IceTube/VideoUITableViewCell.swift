@@ -19,6 +19,8 @@ class VideoUITableViewCell: UITableViewCell {
     
     @IBOutlet weak var subTitleLabel: UILabel!
     
+    @IBOutlet weak var topContainer: UIView!
+    
     private let imageCache = NSCache<NSString, UIImage>()
     
     var video : Video? {
@@ -61,7 +63,9 @@ class VideoUITableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-         avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
+        avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
+//        let topContainerHeight = (topContainer.frame.width * 9)/16
+//        topContainer.frame.size = CGSize(width: topContainer.frame.width, height: topContainerHeight)
         // Initialization code
     }
 
@@ -83,10 +87,13 @@ class VideoUITableViewCell: UITableViewCell {
         Alamofire.request(url, method: .get, parameters: nil)
          .response { (response) in
             if let data = response.data {
-                let  image =  UIImage(data: data)
-                self.imageCache.setObject(image!, forKey: url as NSString)
-                if(url == self.video?.thumbnailImageUrl || url == self.video?.channel?.profileImageNameUrl){
-                    imageView.image = image
+                if  let image =  UIImage(data: data) {
+                    self.imageCache.setObject(image, forKey: url as NSString)
+                    if(url == self.video?.thumbnailImageUrl || url == self.video?.channel?.profileImageNameUrl){
+                        imageView.image = image
+                    }
+                }else{
+                     print("Error : \("Unable to create image form image data goten form URL") \(url)")
                 }
              }
              else{

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0432E420236D6DD500164A5F /* SettingUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0432E41F236D6DD500164A5F /* SettingUIView.xib */; };
+		0432E422236D6FCA00164A5F /* SettingUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432E421236D6FCA00164A5F /* SettingUIView.swift */; };
 		045CB4BF236B26420034082D /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CB4BE236B26420034082D /* Video.swift */; };
 		045CB4C1236B26D90034082D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045CB4C0236B26D90034082D /* Channel.swift */; };
 		0468A4782364D85200A83DEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468A4772364D85200A83DEC /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0432E41F236D6DD500164A5F /* SettingUIView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingUIView.xib; sourceTree = "<group>"; };
+		0432E421236D6FCA00164A5F /* SettingUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUIView.swift; sourceTree = "<group>"; };
 		045CB4BE236B26420034082D /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		045CB4C0236B26D90034082D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		0468A4742364D85200A83DEC /* IceTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IceTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +76,8 @@
 			children = (
 				0468A47D2364D85300A83DEC /* Main.storyboard */,
 				0468A4822364D85800A83DEC /* LaunchScreen.storyboard */,
+				0432E421236D6FCA00164A5F /* SettingUIView.swift */,
+				0432E41F236D6DD500164A5F /* SettingUIView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0468A4842364D85800A83DEC /* LaunchScreen.storyboard in Resources */,
+				0432E420236D6DD500164A5F /* SettingUIView.xib in Resources */,
 				0468A48E236502C400A83DEC /* VideoUITableViewCell.xib in Resources */,
 				0468A4812364D85800A83DEC /* Assets.xcassets in Resources */,
 				0468A47F2364D85300A83DEC /* Main.storyboard in Resources */,
@@ -246,6 +253,7 @@
 				0468A47C2364D85300A83DEC /* HomeController.swift in Sources */,
 				045CB4C1236B26D90034082D /* Channel.swift in Sources */,
 				0468A48D236502C400A83DEC /* VideoUITableViewCell.swift in Sources */,
+				0432E422236D6FCA00164A5F /* SettingUIView.swift in Sources */,
 				0468A4782364D85200A83DEC /* AppDelegate.swift in Sources */,
 				0468A47A2364D85300A83DEC /* SceneDelegate.swift in Sources */,
 				045CB4BF236B26420034082D /* Video.swift in Sources */,

@@ -15,20 +15,21 @@ class HomeController: UIViewController {
     @IBOutlet weak var videosTableView: UITableView!
     
     @IBOutlet weak var menuItem1: UIView!
-    
+
     @IBOutlet weak var menuItem2: UIView!
-    
+
     @IBOutlet weak var menuItem3: UIView!
-    
+
     @IBOutlet weak var menuItem4: UIView!
-    
+
     @IBOutlet weak var menuItem1Icon: UIImageView!
-    
+
     @IBOutlet weak var menuItem2Icon: UIImageView!
-    
+
     @IBOutlet weak var menuItem3Icon: UIImageView!
-    
+
     @IBOutlet weak var menuItem4Icon: UIImageView!
+    
     
     private var menueItems : [UIView]?
     
@@ -38,17 +39,26 @@ class HomeController: UIViewController {
     
     private var videos : [Video] =  [Video]()
     
+    private var menueItemsImageNames : [String]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         videosTableView.register(UINib(nibName: "VideoUITableViewCell", bundle : nil), forCellReuseIdentifier: "videoUITableViewCell");
         videosTableView.dataSource = self;
+       
+        loadVideosFromUrl()
+        setUpMenu()
+    }
+    
+    private func setUpMenu() {
+        menueItemsImageNames = ["home", "trending", "subscriptions", "account"]
         menueItems = [menuItem1, menuItem2, menuItem3, menuItem4];
         menueItemIcons = [menuItem1Icon, menuItem2Icon, menuItem3Icon, menuItem4Icon]
-        for menueItem in menueItems! {
-            menueItem.addGestureRecognizer(UITapGestureRecognizer(target: self, action:  #selector (self.changeSelectedMenuItem (_:))))
+        for key in 0...3 {
+            menueItems![key].addGestureRecognizer(UITapGestureRecognizer(target: self, action:  #selector (self.changeSelectedMenuItem (_:))))
+            menueItemIcons![key].image = UIImage(named: menueItemsImageNames![key])?.withRenderingMode(.alwaysTemplate)
+            menueItemIcons![key].tintColor = key != 0 ? UIColor.tertiaryLabel : UIColor.white
         }
-        loadVideosFromUrl()
     }
     
     @objc func changeSelectedMenuItem(_ sender:UITapGestureRecognizer){
@@ -82,6 +92,9 @@ class HomeController: UIViewController {
                    }
                }
     }
+    @IBAction func showSetting(_ sender: Any) {
+        SettingUIView.show()
+    }
 }
 
 extension HomeController: UITableViewDataSource {
@@ -98,4 +111,3 @@ extension HomeController: UITableViewDataSource {
     }
     
 }
-

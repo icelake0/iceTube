@@ -49,8 +49,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YJ7-Un-ome" userLabel="MenueItem1TopView">
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="house.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-Qx-bIY" userLabel="menuItem1Icon">
-                                                                <rect key="frame" x="0.0" y="-0.5" width="94" height="47"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="U8H-Qx-bIY" userLabel="menuItem1Icon">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </imageView>
                                                         </subviews>
@@ -83,9 +83,9 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ddt-MS-K7B" userLabel="MenueItem1TopView">
                                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="47"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flame.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Pu-Xa-1rG" userLabel="menuItem2Icon">
-                                                                <rect key="frame" x="0.0" y="-1" width="93.5" height="47.5"/>
-                                                                <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trending" translatesAutoresizingMaskIntoConstraints="NO" id="2Pu-Xa-1rG" userLabel="menuItem2Icon">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="47"/>
+                                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </imageView>
                                                         </subviews>
                                                         <constraints>
@@ -116,8 +116,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0P-iP-TAA" userLabel="MenueItem1TopView">
                                                         <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.stack.badge.plus.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RsF-rq-YBI" userLabel="menuItem3Icon">
-                                                                <rect key="frame" x="0.0" y="-1" width="94" height="49.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="subscriptions" translatesAutoresizingMaskIntoConstraints="NO" id="RsF-rq-YBI" userLabel="menuItem3Icon">
+                                                                <rect key="frame" x="0.0" y="0.0" width="94" height="47"/>
                                                                 <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                         </subviews>
@@ -149,8 +149,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beK-Cg-2Lx" userLabel="MenueItem1TopView">
                                                         <rect key="frame" x="0.0" y="0.0" width="93.5" height="47"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NBN-1f-xAT" userLabel="menuItem4Icon">
-                                                                <rect key="frame" x="0.0" y="1.5" width="93.5" height="44.5"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="NBN-1f-xAT" userLabel="menuItem4Icon">
+                                                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="47"/>
                                                                 <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </imageView>
                                                         </subviews>
@@ -207,10 +207,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="uhQ-Qx-9hs">
                         <rightBarButtonItems>
-                            <barButtonItem image="list.bullet" catalog="system" id="gQO-eq-Tto">
+                            <barButtonItem image="nav_more_icon" id="gQO-eq-Tto">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="showSetting:" destination="3mw-oa-CWs" id="i7O-NX-HZx"/>
+                                </connections>
                             </barButtonItem>
-                            <barButtonItem image="magnifyingglass" catalog="system" id="OF2-QH-b4t">
+                            <barButtonItem image="search_icon" id="OF2-QH-b4t">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -233,11 +236,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="flame.fill" catalog="system" width="54" height="64"/>
-        <image name="house.fill" catalog="system" width="64" height="52"/>
-        <image name="list.bullet" catalog="system" width="64" height="44"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="rectangle.stack.badge.plus.fill" catalog="system" width="64" height="56"/>
+        <image name="account" width="40" height="40"/>
+        <image name="home" width="40" height="40"/>
+        <image name="nav_more_icon" width="24" height="24"/>
+        <image name="search_icon" width="24" height="24"/>
+        <image name="subscriptions" width="40" height="40"/>
+        <image name="trending" width="40" height="40"/>
     </resources>
 </document>
